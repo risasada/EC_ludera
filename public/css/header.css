@@ -1,0 +1,52 @@
+
+
+.header{
+    width:100%;
+    background-color:white;
+    display: flex;
+    position: fixed;
+    height: 55px;
+}
+.inner h1{
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 27px;
+    line-height: 55px;
+}
+
+.inner{
+    width:90%;
+    height:100%;
+    display: flex;
+    margin:0 auto;
+}
+
+.header-menu1{
+    margin-right: auto;
+}
+
+.header-menu2{
+    margin-left: auto;
+}
+
+.inner li{
+    line-height: 46px;
+    list-style: none;
+    display: inline-block;
+    font-size: 12px;
+    padding: 6px;
+    text-decoration:none;
+    height:50;
+}
+
+.inner a{
+    text-decoration:none;
+    color:black;
+}
+
+.inner a:hover{
+    text-decoration: underline;
+}
+
+
+
