@@ -1,0 +1,29 @@
+.category-list {
+  width: 30%;
+  background: #3c3c3c;
+  color: antiquewhite;
+}
+
+.category-list .category-item {
+  width: 100%;
+  background: #829797;
+}
+
+.category-list .category-item .category-name {
+  width: 100%;
+  font-size: 1.1em;
+  color: black;
+}
+
+.category-list .category-item .category-child-list {
+  display: none;
+  width: 100%;
+  background: #7c6859;
+}
+
+.category-list .category-item .category-child-list .category-child-name {
+  font-size: 0.7em;
+  padding-left: 40px;
+  color: black;
+}
+/*# sourceMappingURL=leftMenuStyle.css.map */
