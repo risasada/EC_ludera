@@ -4,6 +4,10 @@
   color: antiquewhite;
 }
 
+.category-list #reset_tag {
+  display: inline;
+}
+
 .category-list .category-item {
   width: 100%;
   background: #829797;
