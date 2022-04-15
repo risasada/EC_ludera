@@ -27,7 +27,7 @@ body {
 .item-Menu-wrap .item-menu-left-wrap {
   max-width: 30%;
   width: 100%;
-  background: salmon;
+  background: #e6e6e6;
   position: relative;
 }
 
@@ -39,6 +39,32 @@ body {
   left: 0;
   padding-top: 100px;
   padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: .5em;
+}
+
+.item-Menu-wrap .item-menu-left-wrap .left-fixed-item #ul-one {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.item-Menu-wrap .item-menu-left-wrap .left-fixed-item #ul-one li {
+  padding: 3px;
+}
+
+.item-Menu-wrap .item-menu-left-wrap .left-fixed-item p {
+  padding: 15px 0px;
+}
+
+.item-Menu-wrap .item-menu-left-wrap .left-fixed-item ul {
+  padding-left: 5px;
+  margin-left: 5px;
 }
 
 .item-Menu-wrap .item-menu-center-wrap {
@@ -59,7 +85,7 @@ body {
 .item-Menu-wrap .item-menu-right-wrap {
   max-width: 30%;
   width: 100%;
-  background: seagreen;
+  background: #e6e6e6;
   position: relative;
 }
 
@@ -71,6 +97,66 @@ body {
   left: 0;
   padding-top: 100px;
   padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.item-Menu-wrap .item-menu-right-wrap .right-fixed-item h4.price {
+  font-size: .5em;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+
+.item-Menu-wrap .item-menu-right-wrap .right-fixed-item h4.tax-info {
+  font-size: .5em;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+.item-Menu-wrap .item-menu-right-wrap .right-fixed-item form .select {
+  outline: none;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 0;
+  height: 50px;
+  padding-left: 5pxpx;
+  padding-right: 10px;
+  margin: 20px 0;
+}
+
+.item-Menu-wrap .item-menu-right-wrap .right-fixed-item form .input-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item-Menu-wrap .item-menu-right-wrap .right-fixed-item form .input-wrap .add-cart {
+  width: 100%;
+  border-style: none;
+  color: antiquewhite;
+  background: #000000;
+  border-radius: 0;
+  padding: 10px 10px;
+  line-height: 20px;
+  display: block;
+}
+
+.item-Menu-wrap .item-menu-right-wrap .right-fixed-item form .input-wrap .add-list {
+  width: 100%;
+  border-style: none;
+  color: antiquewhite;
+  background: #2e1c1c;
+  border-radius: 0;
+  padding: 10px 10px;
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .footer {

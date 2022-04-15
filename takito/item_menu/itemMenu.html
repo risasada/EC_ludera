@@ -22,7 +22,7 @@
             <!-- left-item のデザイン -->
             <div class="left-fixed-item">
                 <h3>MARIN</h3>
-                <ul>
+                <ul id="ul-one">
                     <li>ネイビー</li>
                     <li>ナイロン</li>
                     <li>リバーシブル</li>
@@ -63,16 +63,19 @@
 
             <!-- rights-item のデザイン -->
             <div class="right-fixed-item">
-                <h4>¥283500 JPY</h4>
-                <h4>関税と消費税込み</h4>
+                <h4 class="price">¥283500 JPY</h4>
+                <h4 class="tax-info">関税と消費税込み</h4>
                 <form action="">
-                    <select name="" id="" style="display: block;">
+                    <select class="select" name="" id="" style="display: block;">
                         <option value="">sentaku</option>
                         <option value="">XXS</option>
                         <option value="">XXL</option>
                     </select>
-                    <input type="submit" value="カートに追加">
-                    <input type="submit" value="欲しいものリストに追加">
+                    
+                    <div class="input-wrap">
+                        <input class="add-cart" type="submit" value="カートに追加" >
+                        <input class="add-list" type="submit" value="欲しいものリストに追加">
+                    </div>
                 </form>
                 
             </div>
