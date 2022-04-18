@@ -1,0 +1,147 @@
+.header-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  font-size: .5em;
+  padding: 3px 3px;
+}
+
+.header-wrap .header-left-wrap {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.header-wrap .header-left-wrap .menswear {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-left-wrap .womanswear {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-left-wrap .mono {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-left-wrap .kensaku {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-left-wrap .footer-nav {
+  background: red;
+  padding: 10px;
+  position: absolute;
+  top: 46px;
+  left: 100px;
+  width: 300px;
+  z-index: 100;
+}
+
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-menswear {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-womanswear {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-mono {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form {
+  background: white;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form .nav-serch-grid {
+  width: 100%;
+  display: block;
+  outline: none;
+  border-style: none;
+  border: 0px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form .nav-serch-submit {
+  display: block;
+  border-style: none;
+  border: 0px;
+}
+
+.header-wrap .header-logo-wrap {
+  width: 40%;
+  text-align: center;
+}
+
+.header-wrap .header-right-wrap {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.header-wrap .header-right-wrap .hr-langage {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-right-wrap .hr-login {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-right-wrap .hr-hosiimono-list {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+.header-wrap .header-right-wrap .hr-shopingcart {
+  width: 100%;
+  text-align: center;
+  padding: 5px 8px;
+}
+/*# sourceMappingURL=header.css.map */

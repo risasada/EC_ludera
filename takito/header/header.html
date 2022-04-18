@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    
+    <div class="header-wrap">
+        <div class="header-left-wrap">
+            <div class="menswear">
+                <a href="">メンズウェア</a>
+            </div>
+            <div class="womanswear">
+                <a href="">ウィメンズウェア</a>
+            </div>
+            <div class="mono">
+                <a href="">物とモノ</a>
+            </div>
+            <div class="kensaku">
+                検索
+            </div>
+            <nav class="footer-nav">
+                <div class="nav-footer-head">
+                    <div class="nav-menswear">
+                        <a href="">メンズウェア</a>
+                    </div>
+                    <div class="nav-womanswear">
+                        <a href="">ウィメンズウェア</a>
+                    </div>
+                    <div class="nav-mono">
+                        <a href="">物とモノ</a>
+                    </div>
+                </div>
+                <div class="serch-grid">
+                    <form  class='nav-form'action="">
+                        <input  class="nav-serch-grid" type="text">
+                        <input  class="nav-serch-submit" type="image" src="./balloon-fill.svg">
+                    </form>
+                    <div class="close-button">閉じる</div>
+                </div>
+            </nav>
+        </div>
+        <div class="header-logo-wrap">
+            SSENCE
+        </div>
+        <div class="header-right-wrap">
+            <div class="hr-langage">
+                日本語
+            </div>
+            <div class="hr-login">
+                ログイン
+            </div>
+            <div class="hr-hosiimono-list">
+                欲しい物リスト
+            </div>
+            <div class="hr-shopingcart">
+                ショッピングカート
+            </div>
+        </div>
+        
+
+    </div>
+    <script>
+        const closeButtonElement = document.getElementsByClassName('close-button')[0]
+        const navMenuElement = document.getElementsByClassName('footer-nav')[0]
+        const serchElement = document.getElementsByClassName('kensaku')[0]
+
+
+
+        serchElement.addEventListener('click',()=>{
+            navMenuElement.style['display'] = 'inline'
+            console.log('kensaku click')
+        })
+
+        closeButtonElement.addEventListener('click',()=>{
+            navMenuElement.style['display'] = 'none'
+        })
+
+
+    </script>
+</body>
+</html>
