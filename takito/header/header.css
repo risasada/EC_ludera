@@ -38,9 +38,11 @@
   width: 100%;
   text-align: center;
   padding: 5px 8px;
+  cursor: default;
 }
 
 .header-wrap .header-left-wrap .footer-nav {
+  display: none;
   background: red;
   padding: 10px;
   position: absolute;
@@ -55,24 +57,26 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  left: -10px;
+  cursor: default;
 }
 
 .header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-menswear {
   width: 100%;
   text-align: center;
-  padding: 5px 8px;
+  padding: 5px 8px 5px 2px;
 }
 
 .header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-womanswear {
   width: 100%;
   text-align: center;
-  padding: 5px 8px;
+  padding: 5px 8px 5px 2px;
 }
 
 .header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-mono {
   width: 100%;
   text-align: center;
-  padding: 5px 8px;
+  padding: 5px 8px 5px 2px;
 }
 
 .header-wrap .header-left-wrap .footer-nav .serch-grid {
@@ -80,6 +84,9 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form {
@@ -100,12 +107,64 @@
   outline: none;
   border-style: none;
   border: 0px;
+  font-size: 15pt;
+  padding: 5px 0px 5px 5px;
+  position: relative;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form .nav-serch-grid::-webkit-input-placeholder {
+  font-size: 10px;
+  -webkit-box-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form .nav-serch-grid:-ms-input-placeholder {
+  font-size: 10px;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  top: 10px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form .nav-serch-grid::-ms-input-placeholder {
+  font-size: 10px;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  top: 10px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form .nav-serch-grid::placeholder {
+  font-size: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
 }
 
 .header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form .nav-serch-submit {
   display: block;
   border-style: none;
   border: 0px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .close-button {
+  margin-left: 10px;
+  cursor: default;
+}
+
+.header-wrap .nav-mask {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 90;
 }
 
 .header-wrap .header-logo-wrap {
@@ -143,5 +202,23 @@
   width: 100%;
   text-align: center;
   padding: 5px 8px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button.header-nav-menu:focus {
+  color: red;
+}
+
+button {
+  background: rgba(0, 0, 0, 0);
+  border-style: none;
+  border: 0px;
+  font-size: .5em;
+  padding: 0;
+  margin: 0;
 }
 /*# sourceMappingURL=header.css.map */

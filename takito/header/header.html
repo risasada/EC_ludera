@@ -13,7 +13,7 @@
     <div class="header-wrap">
         <div class="header-left-wrap">
             <div class="menswear">
-                <a href="">メンズウェア</a>
+                <a class="header-menu">メンズウェア</a>
             </div>
             <div class="womanswear">
                 <a href="">ウィメンズウェア</a>
@@ -27,25 +27,26 @@
             <nav class="footer-nav">
                 <div class="nav-footer-head">
                     <div class="nav-menswear">
-                        <a href="">メンズウェア</a>
+                        <button onclick="placeholderChange('メンスウェア')">メンスウェア</button>
                     </div>
                     <div class="nav-womanswear">
-                        <a href="">ウィメンズウェア</a>
+                        <button onclick="placeholderChange('ウィメンズウェア')">ウィメンズウェア</button>
                     </div>
                     <div class="nav-mono">
-                        <a href="">物とモノ</a>
+                        <button onclick="placeholderChange('物とモノ')">物とモノ</button>
                     </div>
                 </div>
                 <div class="serch-grid">
                     <form  class='nav-form'action="">
-                        <input  class="nav-serch-grid" type="text">
+                        <input  class="nav-serch-grid" type="text" placeholder="メンズウェアを検索">
                         <input  class="nav-serch-submit" type="image" src="./balloon-fill.svg">
                     </form>
                     <div class="close-button">閉じる</div>
                 </div>
             </nav>
+            <div class="nav-mask"></div>
         </div>
-        <div class="header-logo-wrap">
+        <div class="header-logo-wrap" >
             SSENCE
         </div>
         <div class="header-right-wrap">
@@ -69,18 +70,24 @@
         const closeButtonElement = document.getElementsByClassName('close-button')[0]
         const navMenuElement = document.getElementsByClassName('footer-nav')[0]
         const serchElement = document.getElementsByClassName('kensaku')[0]
-
-
+        const navMaskElement = document.getElementsByClassName('nav-mask')[0]
+        const navSearchGridElement = document.getElementsByClassName('nav-serch-grid')[0]
 
         serchElement.addEventListener('click',()=>{
             navMenuElement.style['display'] = 'inline'
+            navMaskElement.style['display'] = 'inline'
             console.log('kensaku click')
         })
 
         closeButtonElement.addEventListener('click',()=>{
             navMenuElement.style['display'] = 'none'
+            navMaskElement.style['display'] = 'none'
         })
 
+        function placeholderChange(queryName) {
+            return navSearchGridElement.placeholder = queryName
+
+        }
 
     </script>
 </body>
