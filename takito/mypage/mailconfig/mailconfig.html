@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="mailconfig.css">
+    <script type="text/javascript" src="./mailconfigfirstrender.js"></script>
+</head>
+<body>
+    <div class="account-info-wrap">
+        <div class="account-info-left">
+            <div class="account">
+                アカウント
+            </div>
+            <div class="account-info">
+                <a href="">アカウントの詳細</a>
+            </div>
+            <div class="mail-config">
+                <a href="">メール購読設定</a>
+            </div>
+            <div class="order">
+                <a href="">ご注文履歴</a>
+            </div>
+            <div class="resavation">
+                <a href="">ご予約</a>
+            </div>
+            <div class="address">
+                <a href="">住所</a>
+            </div>
+            <div class="logout">
+                <a href="">ログアウト</a>
+            </div>
+        </div>
+        <div class="account-info-center">
+            <form action="">
+                <h4 class="center-title">メール購読設定</h4>
+                <label for="">ニュースレター</label>
+                <input type="checkbox" value="購読" id="" checked class="newsSelector">
+                <span class="notblock">購読</span>
+                <input type="checkbox" value="購読解除" id="" class="newsSelector">
+                <span class="notblock">購読解除</span>
+
+                <h4>詳細設定</h4>
+                <label for="">性別</label>
+                <input type="checkbox" value="メンズ" id="" checked class="sexSelector">
+                <span class="notblock">メンズ</span>
+                <input type="checkbox" value="ウィメンズ" id="" class="sexSelector">
+                <span class="notblock">ウィメンズ</span>
+
+                <h4>言語</h4>
+                <select name="" id="">
+                    <option value="">日本</option>
+                    <option value="">ENGLISH</option>
+                </select>
+                <h4>国/地域</h4>
+                <select name="" id="" class="country">
+                    <option value="">日本</option>
+                </select>
+
+                <h4>メール通知</h4>
+                <input type="checkbox" value="オン" id="" checked class="mailSelector">
+                <span class="notblock">オン</span>
+                <input type="checkbox" value="オフ" id="" class="mailSelector">
+                <span class="notblock">オフ</span>
+
+                <input class="mepage-submit-button" type="submit" value="変更の保存">
+            </form>
+            <script type="text/javascript" src="./mailconfig.js"></script>
+        </div>
+        
+    </div>
+</body>
+</html>
