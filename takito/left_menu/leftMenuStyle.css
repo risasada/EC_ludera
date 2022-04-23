@@ -4,9 +4,22 @@
   color: antiquewhite;
 }
 
-.category-list #reset_tag:hover a {
-  border-bottom: 1px solid black;
-  text-decoration: underline;
+.category-list #reset_tag {
+  font-weight: 900px;
+  font-size: 1em;
+  -webkit-text-decoration: underline solid rgba(0, 0, 0, 0);
+          text-decoration: underline solid rgba(0, 0, 0, 0);
+}
+
+.category-list #reset_tag:hover {
+  -webkit-text-decoration: underline solid black;
+          text-decoration: underline solid black;
+}
+
+.category-list #reset_tag:checked {
+  -webkit-text-decoration: underline solid black;
+          text-decoration: underline solid black;
+  background: salmon;
 }
 
 .category-list .category-item {
@@ -16,8 +29,16 @@
 
 .category-list .category-item .category-name {
   width: 100%;
-  font-size: 1.1em;
+  font-size: .7em;
+  font-weight: 500;
   color: black;
+  -webkit-text-decoration: underline solid rgba(0, 0, 0, 0);
+          text-decoration: underline solid rgba(0, 0, 0, 0);
+}
+
+.category-list .category-item .category-name:hover {
+  -webkit-text-decoration: underline solid black;
+          text-decoration: underline solid black;
 }
 
 .category-list .category-item .category-child-list {
@@ -27,13 +48,46 @@
 }
 
 .category-list .category-item .category-child-list .category-child-name {
-  font-size: 0.7em;
+  font-size: 0.5em;
+  font-weight: 100;
   padding-left: 40px;
   color: black;
+  -webkit-text-decoration: underline solid rgba(0, 0, 0, 0);
+          text-decoration: underline solid rgba(0, 0, 0, 0);
+}
+
+.category-list .category-item .category-child-list .category-child-name:hover {
+  -webkit-text-decoration: underline solid black;
+          text-decoration: underline solid black;
+}
+
+.category-list .category-item .category-child-list .category-item-2 .category-child-child-list {
+  display: none;
+  width: 100%;
+  background: #644c3a;
+}
+
+.category-list .category-item .category-child-list .category-item-2 .category-child-child-list .category-child-child-name {
+  font-size: 0.5em;
+  font-weight: 100;
+  padding-left: 60px;
+  color: black;
+  -webkit-text-decoration: underline solid rgba(0, 0, 0, 0);
+          text-decoration: underline solid rgba(0, 0, 0, 0);
+}
+
+.category-list .category-item .category-child-list .category-item-2 .category-child-child-list .category-child-child-name:hover {
+  -webkit-text-decoration: underline solid black;
+          text-decoration: underline solid black;
 }
 
 a {
   text-decoration: none;
   color: azure;
+}
+
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 /*# sourceMappingURL=leftMenuStyle.css.map */

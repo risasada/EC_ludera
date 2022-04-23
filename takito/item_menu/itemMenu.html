@@ -7,12 +7,17 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="itemMenu.css">
+    <link rel="stylesheet" href="itemMenumobile.css">
 </head>
 <body>
 
     <!-- header (test)-->
     <div class="header">
-        RR
+        <div>headItem1
+            <div>headitem1child</div>
+        </div>
+        <div>headItem1</div>
+        <div>headItem1</div>
     </div>
     <!--  -->
 
@@ -21,7 +26,7 @@
 
             <!-- left-item のデザイン -->
             <div class="left-fixed-item">
-                <h3>MARIN</h3>
+                <h3 id="dai">MARIN</h3>
                 <ul id="ul-one">
                     <li>ネイビー</li>
                     <li>ナイロン</li>
@@ -63,8 +68,16 @@
 
             <!-- rights-item のデザイン -->
             <div class="right-fixed-item">
-                <h4 class="price">¥283500 JPY</h4>
-                <h4 class="tax-info">関税と消費税込み</h4>
+                <div class="responce">
+                    <h4 class="res-title">MARIN</h4>
+                    <h4 class="price">¥283500 JPY</h4>
+                    <h4 class="sozai">sozai</h4>
+                    <h4 class="tax-info">関税と消費税込み</h4>
+                </div>
+                <div class="no-responce">
+                    <h4 class="price">¥283500 JPY</h4>
+                    <h4 class="tax-info">関税と消費税込み</h4>
+                </div>
                 <form action="">
                     <select class="select" name="" id="" style="display: block;">
                         <option value="">sentaku</option>

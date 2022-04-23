@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="address.css">
+</head>
+<body>
+    <div class="account-info-wrap">
+        <div class="account-info-left">
+            <div class="account">
+                アカウント
+            </div>
+            <div class="account-info">
+                <a href="">アカウントの詳細</a>
+            </div>
+            <div class="mail-config">
+                <a href="">メール購読設定</a>
+            </div>
+            <div class="order">
+                <a href="">ご注文履歴</a>
+            </div>
+            <div class="resavation">
+                <a href="">ご予約</a>
+            </div>
+            <div class="address">
+                <a href="">住所</a>
+            </div>
+            <div class="logout">
+                <a href="">ログアウト</a>
+            </div>
+        </div>
+        <div class="account-info-center">
+            <form action="" novalidate>
+                <label for="mei">
+                    <span>名</span>
+                    <input type="text" id="mei" autocomplete="off" required pattern="[Bb]mama">
+                    <span class="error" aria-live="polite"></span>
+                </label>
+
+
+                <label for="myou">
+                    <span>妙</span>
+                    <input type="text" id="myou" autocomplete="off" required>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+
+
+                <label for="">会社名</label>
+                <input type="text">
+
+                <label for="langage">
+                    <select name="" id="langage" required >
+                        <option value="" selected>-</option>
+                        <option value="">ss</option>
+                    </select>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+
+
+                <label for="coun">
+                    <select name="" id="coun" required require>
+                        <option value="" selected>-</option>
+                        <option value="">ss</option>
+                    </select>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+
+                <label for="">
+                    <span>郵便番号</span>
+                    <input type="text" id="zipcode" autocomplete="off" required pattern="[Bb]mama">
+                    <span class="error" aria-live="polite"></span>
+                </label>
+
+                <label for="">
+                    <span>電話番号</span>
+                    <input type="text" id="tel" autocomplete="off" required pattern="[Bb]mama"> 
+                    <span class="error" aria-live="polite"></span>
+                </label>
+
+
+                <input type="reset" value="取り消し">
+                <input class='input' type="submit" value="保存">
+            </form>
+            
+        </div>
+        <div class="account-info-right">
+            A
+        </div>
+    </div>
+    <script type="text/javascript" src="address.js"></script>
+</body>
+</html>

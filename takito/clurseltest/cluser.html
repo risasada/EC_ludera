@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cliser.css">
+</head>
+<body>
+    <div class="window">
+        <div class="wrap">
+            <div class="shape">A</div>
+            <div class="shape">B</div>
+            <div class="shape">C</div>
+            <div class="shape">D</div>
+        </div>
+    </div>
+    <div class="calsel">
+        <!--  -->
+    </div>
+    <script>
+        //カルーセルボタン用エレメント取得 
+        const calsel = document.getElementsByClassName('calsel')[0]
+
+        // カルーセル画像のワッパーエレメント取得
+        const colusel = document.getElementsByClassName('wrap')[0]
+
+        //カルーセルの枠用エレメントの座標(Left)を取得
+        const windowLeftPoti = document.getElementsByClassName('window')[0].getBoundingClientRect().left
+
+        //ワッパーエレメントの座標(Left)を取得
+        const wrapLeftPoti = document.getElementsByClassName('wrap')[0].getBoundingClientRect().left
+
+        //枠とワッパー間の差を計算
+        const marg = windowLeftPoti - wrapLeftPoti 
+
+        //カルーセル一つあたりの横幅取得
+        const wrapWidth = document.getElementsByClassName('wrap')[0].children[0].clientWidth + 2
+
+
+        /*  クリックエレメント作成、クリックイベント作成*/
+        var count = 0
+        for (const child of colusel.children) {
+            console.log(child)
+            const transX = wrapWidth*count; 
+            const childitem = document.createElement('button')
+            childitem.classList.add('cer')
+            childitem.addEventListener('click',function(){
+                resetcolor()
+                console.log(child.getBoundingClientRect().left)
+                leftpoti = child.getBoundingClientRect().left
+                colusel.style['transform'] = `translateX(-${transX}px)`
+                this.style['width'] = '40px'
+                this.style['background'] = 'black'
+            })
+            calsel.append(childitem)
+            
+            count +=1;
+        }
+
+        const eventC = new Event('click');
+        window.onload = function(){ 
+            document.getElementsByClassName('cer')[0].focus()
+        
+            
+        } 
+        function resetcolor(){
+            for (const element of document.getElementsByClassName('cer')) {
+                element.style['width'] = '20px' 
+                element.style['background'] = 'rgb(235, 203, 174)'
+            } 
+
+        }
+
+        
+    </script>
+</body>
+</html>

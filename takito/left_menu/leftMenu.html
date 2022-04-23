@@ -12,25 +12,54 @@
 <body>
     <div class="category-list">
         <h3 id="reset_tag">
-            <a href="">全てのカテゴリ</a>
+            全てのカテゴリ
         </h3>
         <div class="category-item">
-            <div class="category-name">アクセサリー</div>
+            <div class="category-name">
+                アクセサリー 
+            </div>
             <div class="category-child-list" id="child-list">
-                <div class="category-child-name">アイウェア</div>
-                <div class="category-child-name">ウォレットチェーン</div>
+                <div class="category-child-name">
+                    アイウェア 
+                </div>
+
+                <!--  -->
+                <div class='category-item-2'>
+                    <div class="category-child-child-list" id="child-list">
+                        <div class="category-child-child-name">
+                            サングラス
+                        </div>
+                        <div class="category-child-child-name">
+                            メガネ    
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-child-name">
+                    ウォレットチェーン    
+                </div>
+            </div>
+            
+
+
+        </div>
+        <div class="category-item">
+            <div class="category-name">
+                ウェア
+            </div>
+            <div class="category-child-list" id="child-list">
+                <div class="category-child-name">
+                    アイウェア 
+                </div>
             </div>
         </div>
         <div class="category-item">
-            <div class="category-name">ウェア</div>
-            <div class="category-child-list" id="child-list">
-                <div class="category-child-name">アイウェア</div>
+            <div class="category-name">
+                シューズ
             </div>
-        </div>
-        <div class="category-item">
-            <div class="category-name">シューズ</div>
             <div class="category-child-list" id="child-list">
-                <div class="category-child-name"></div>
+                <div class="category-child-name">
+                </div>
             </div>
         </div>
     </div>
@@ -38,28 +67,96 @@
 
     const retes = document.getElementById('reset_tag')
     const itemElement = document.getElementsByClassName('category-item')
+    const child_itemElement = document.getElementsByClassName('category-child-name')
+    
 
     retes.addEventListener('click',function(){
         const categoryItem = document.querySelectorAll("div.category-item")
         for (const elem of categoryItem){
             elem.children[1].style['display'] = 'none'
+            initial_border(child_itemElement)
             // elem.nextElementSibling.style['display'] = 'none'
         }
     })
 
     for (const elem of itemElement) {
-        elem.addEventListener('click',function(){
-
+        elem.addEventListener('click',function(e){
             const nextElem = this.children[0].nextElementSibling
+            //ここ追加
+            nextElem.addEventListener('click',(e)=>{
+                
+                e.stopPropagation();
+                // console.log(e.target)
+                // //ここさらに追加
+                // console.log('hi')
+                // console.log('this:category-child-list')
+                // console.log(this)
+                // console.log('element')
+                // for (const childElem of nextElem.getElementsByClassName('category-child-name')){
+                //     console.log(childElem)
+                //     console.log(getComputedStyle(childElem))
+                //     childElem.style['background'] = 'rgba(0,0,0,1)'
+                // }
+                
+            })
+            //
             console.log(this.children[0].nextElementSibling.style['display'])
             // console.log(getComputedStyle(nextElem).display)
             if (getComputedStyle(nextElem).display==='none') {
                 nextElem.style['display'] = 'block'
             } else if(getComputedStyle(nextElem).display==='block') {
                 nextElem.style['display'] = 'none'
+                initial_border(child_itemElement)
+                
             }
+
+            //koko
+            console.log(nextElem)
+            console.log(nextElem.children[1])
+            console.log(nextElem.children['category-item-2'])
         })
     }
+
+    for (const chilElem of child_itemElement) {
+        console.log(chilElem)
+        
+        chilElem.addEventListener('click',(e)=>{
+            initial_border(child_itemElement)
+            console.log(e.target)
+            e.target.style['background']='rgba(0,0,0,0.3)'
+        })
+        
+    }
+
+    function initial_border(clildElements) {
+        
+        for (const iniElem of clildElements) {
+            iniElem.style['background'] = 'rgba(255,255,255,1)'
+        }
+
+    }
+
+    //koko
+    // console.log(child_itemElement)
+    // for (const chilElem of child_itemElement){
+    //     console.log(chilElem.nextElementSibling)
+    //     chilElem.addEventListener('click',(e)=>{
+            
+    //         const nextElem = this   
+    //         console.log(nextElem)
+            
+
+    //         // const nextElem = this.nextElementSibling
+
+    //         // console.log(chilElem.nextElementSibling)
+    //         // console.log(getComputedStyle(nextElem).display)
+    //         // if (getComputedStyle(nextElem).display==='none') {
+    //         //     nextElem.style['display'] = 'block'
+    //         // } else if(getComputedStyle(nextElem).display==='block') {
+    //         //     nextElem.style['display'] = 'none'
+    //         // }
+    //     })
+    // }
 
 
     ////////////一応まだ消したくない////////////////////
@@ -104,6 +201,7 @@
         console.log(e)
     })
     */
+
 </script>
 </body>
 </html>
