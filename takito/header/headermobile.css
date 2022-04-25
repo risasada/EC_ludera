@@ -5,13 +5,16 @@
   .header-wrap {
     display: none;
   }
-  .hedaer-wrap-mobile {
+  .mobile {
+    position: relative;
+  }
+  .mobile .hedaer-wrap-mobile {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .hedaer-wrap-mobile .header-mobile-left {
+  .mobile .hedaer-wrap-mobile .header-mobile-left {
     background: rebeccapurple;
     width: calc(100% / 3);
     display: -webkit-box;
@@ -22,7 +25,7 @@
             align-items: center;
     padding-left: 10px;
   }
-  .hedaer-wrap-mobile .header-mobile-center {
+  .mobile .hedaer-wrap-mobile .header-mobile-center {
     background: salmon;
     width: calc(100% / 3);
     display: -webkit-box;
@@ -32,7 +35,7 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .hedaer-wrap-mobile .header-mobile-right {
+  .mobile .hedaer-wrap-mobile .header-mobile-right {
     background: forestgreen;
     width: calc(100% / 3);
     display: -webkit-box;
@@ -43,9 +46,148 @@
             align-items: center;
     padding-left: 10px;
   }
-  * {
+  .mobile .footer-nav {
+    display: none;
+    background: red;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+  }
+  .mobile .footer-nav .nav-footer-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    left: -10px;
+    cursor: default;
+  }
+  .mobile .footer-nav .nav-footer-head .nav-menswear {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px 5px 2px;
+  }
+  .mobile .footer-nav .nav-footer-head .nav-womanswear {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px 5px 2px;
+  }
+  .mobile .footer-nav .nav-footer-head .nav-mono {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px 5px 2px;
+  }
+  .mobile .footer-nav .serch-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile .footer-nav .serch-grid .nav-form {
+    background: white;
+    border: 1px solid black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80%;
+  }
+  .mobile .footer-nav .serch-grid .nav-form .nav-serch-grid {
+    width: 100%;
+    display: block;
+    outline: none;
+    border-style: none;
+    border: 0px;
+    font-size: 15pt;
+    padding: 5px 0px 5px 5px;
+    position: relative;
+  }
+  .mobile .footer-nav .serch-grid .nav-form .nav-serch-grid::-webkit-input-placeholder {
+    font-size: 10px;
+    -webkit-box-align: center;
+            align-items: center;
+    position: absolute;
+    top: 10px;
+  }
+  .mobile .footer-nav .serch-grid .nav-form .nav-serch-grid:-ms-input-placeholder {
+    font-size: 10px;
+    -ms-flex-align: center;
+        align-items: center;
+    position: absolute;
+    top: 10px;
+  }
+  .mobile .footer-nav .serch-grid .nav-form .nav-serch-grid::-ms-input-placeholder {
+    font-size: 10px;
+    -ms-flex-align: center;
+        align-items: center;
+    position: absolute;
+    top: 10px;
+  }
+  .mobile .footer-nav .serch-grid .nav-form .nav-serch-grid::placeholder {
+    font-size: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 10px;
+  }
+  .mobile .footer-nav .serch-grid .nav-form .nav-serch-submit {
+    display: block;
+    border-style: none;
+    border: 0px;
+  }
+  .mobile .footer-nav .serch-grid .close-button {
+    margin-left: 10px;
+    cursor: default;
+  }
+  .mobile .footer-aside {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: royalblue;
+    z-index: 99;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all .1s ease-in 0s;
+    transition: all .1s ease-in 0s;
+  }
+  .mobile .footer-aside ul {
+    list-style-type: none;
+    position: relative;
+  }
+  .mobile .footer-aside ul li button::after {
+    content: '>';
+    position: absolute;
+    right: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  .mobile nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: silver;
+    -webkit-transition: all .3s ease-in 0s;
+    transition: all .3s ease-in 0s;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+    z-index: 300;
+  }
+  .mobile * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+  button {
+    border-style: none;
+    background: rgba(255, 255, 255, 0);
   }
 }
 /*# sourceMappingURL=headermobile.css.map */

@@ -7,7 +7,6 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="mailconfig.css">
-    <script type="text/javascript" src="./mailconfigfirstrender.js"></script>
 </head>
 <body>
     <div class="account-info-wrap">
@@ -35,23 +34,28 @@
             </div>
         </div>
         <div class="account-info-center">
-            <form action="">
+            <form action="" novalidate>
                 <h4 class="center-title">メール購読設定</h4>
-                <label for="">ニュースレター</label>
-                <input type="checkbox" value="購読" id="" checked class="newsSelector">
-                <span class="notblock">購読</span>
-                <input type="checkbox" value="購読解除" id="" class="newsSelector">
-                <span class="notblock">購読解除</span>
+
+                <label for="">
+                    <span>ニュースレター</span>
+                    <input type="checkbox" value="購読" id="" checked class="newsSelector">
+                    <span class="notblock">購読</span>
+                    <input type="checkbox" value="購読解除" id="" class="newsSelector">
+                    <span class="notblock">購読解除</span>
+                </label>
 
                 <h4>詳細設定</h4>
-                <label for="">性別</label>
-                <input type="checkbox" value="メンズ" id="" checked class="sexSelector">
-                <span class="notblock">メンズ</span>
-                <input type="checkbox" value="ウィメンズ" id="" class="sexSelector">
-                <span class="notblock">ウィメンズ</span>
+                <label for="">
+                    <span>性別</span>
+                    <input type="checkbox" value="メンズ" id="" checked class="sexSelector">
+                    <span class="notblock">メンズ</span>
+                    <input type="checkbox" value="ウィメンズ" id="" class="sexSelector">
+                    <span class="notblock">ウィメンズ</span>
+                </label>
 
                 <h4>言語</h4>
-                <select name="" id="">
+                <select name="" class="sele" id="">
                     <option value="">日本</option>
                     <option value="">ENGLISH</option>
                 </select>
@@ -61,10 +65,12 @@
                 </select>
 
                 <h4>メール通知</h4>
-                <input type="checkbox" value="オン" id="" checked class="mailSelector">
-                <span class="notblock">オン</span>
-                <input type="checkbox" value="オフ" id="" class="mailSelector">
-                <span class="notblock">オフ</span>
+                <label for="">
+                    <input type="checkbox" value="オン" id="" checked class="mailSelector">
+                    <span class="notblock">オン</span>
+                    <input type="checkbox" value="オフ" id="" class="mailSelector">
+                    <span class="notblock">オフ</span>
+                </label>
 
                 <input class="mepage-submit-button" type="submit" value="変更の保存">
             </form>

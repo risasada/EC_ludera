@@ -178,6 +178,9 @@
     text-align: center;
     padding: 5px 8px;
   }
+  .mobile {
+    display: none;
+  }
   a {
     text-decoration: none;
     color: black;

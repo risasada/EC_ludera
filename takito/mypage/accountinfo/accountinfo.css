@@ -46,10 +46,11 @@
   }
   .account-info-wrap .account-info-center {
     width: 60%;
-    min-width: 600px;
+    min-width: 400px;
     padding: 0 20px;
   }
   .account-info-wrap .account-info-center form {
+    width: 100%;
     padding: 10px;
   }
   .account-info-wrap .account-info-center form input {
@@ -105,8 +106,66 @@
 }
 
 @media screen and (max-width: 599px) {
+  * {
+    margin: 0;
+  }
   .account-info-left {
     display: none;
+  }
+  .account-info-center {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .account-info-center form {
+    width: 100%;
+    padding: 10px;
+  }
+  .account-info-center form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #313131;
+    outline: none;
+    font-size: 15pt;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .account-info-center form label {
+    display: block;
+    font-size: .5em;
+    margin: 5px;
+  }
+  .account-info-center form span {
+    display: block;
+  }
+  .account-info-center form h4 {
+    font-weight: 500;
+  }
+  .account-info-center form h5 {
+    font-weight: 100;
+  }
+  .account-info-center form .center-title {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .account-info-center form .mepage-submit-button {
+    outline: none;
+    border: 1px solid black;
+    border-style: none;
+    background: black;
+    color: antiquewhite;
+    width: 30%;
+    margin: 40px auto 0 auto;
+    font-size: .5em;
   }
 }
 /*# sourceMappingURL=accountinfo.css.map */

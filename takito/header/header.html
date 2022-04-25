@@ -67,18 +67,68 @@
         
 
     </div>
-    <div class="hedaer-wrap-mobile">
-        <div class="header-mobile-left">
-            <img width="30" height="30" src="" alt="">
-            <img width="30" height="30" src="" alt="">
+    <div class="mobile">
+        <div class="hedaer-wrap-mobile">
+            <div class="header-mobile-left">
+                <div class="header-item-menu">A</div>
+                <div class="header-item-serch">Serch</div>
+            </div>
+            <div class="header-mobile-center">
+                <img width="50" height="50" src="" alt="">
+            </div>
+            <div class="header-mobile-right">
+                <div class="header-item-account">A</div>
+                <div class="header-item-cart">A</div>
+            </div>
         </div>
-        <div class="header-mobile-center">
-            <img width="50" height="50" src="" alt="">
-        </div>
-        <div class="header-mobile-right">
-            <img width="30" height="30" src="" alt="">
-            <img width="30" height="30" src="" alt="">
-        </div>
+        <nav class="footer-nav">
+                    <div class="nav-footer-head">
+                        <div class="nav-menswear">
+                            <button onclick="placeholderChange_mobile('メンスウェア')">メンスウェア</button>
+                        </div>
+                        <div class="nav-womanswear">
+                            <button onclick="placeholderChange_mobile('ウィメンズウェア')">ウィメンズウェア</button>
+                        </div>
+                        <div class="nav-mono">
+                            <button onclick="placeholderChange_mobile('物とモノ')">物とモノ</button>
+                        </div>
+                    </div>
+                    <div class="serch-grid">
+                        <form  class='nav-form'action="">
+                            <input  class="nav-serch-grid" type="text" placeholder="メンズウェアを検索">
+                            <input  class="nav-serch-submit" type="image" src="./balloon-fill.svg">
+                        </form>
+                        <div class="close-button">閉じる</div>
+                    </div>
+        </nav>
+    
+        <aside class="footer-aside"> 
+            <button class="close-aside">閉じる</button>
+            <ul>
+                <li>
+                    <button class="aside-men">メンズウェア</button>
+                </li>
+                <li>
+                    <button class="aside-women">ウェメンズウェア</button>
+                </li>
+                <li>
+                    <button class="aside-mono">物とモノ</button>
+                </li>
+                <li>
+                    <button class="aside-account">アカウント</button>
+                </li>
+                <li>
+                    <button class="aside-langage">言語</button>
+                </li>
+            </ul>
+        </aside>
+        <nav class="nav-aside-mes">
+            <ul>
+                <li>men</li>
+                <li>women</li>
+            </ul>
+            <button class="aside-men-close-button">close</button>
+        </nav>
     </div>
     <script>
         const closeButtonElement = document.getElementsByClassName('close-button')[0]
@@ -86,6 +136,12 @@
         const serchElement = document.getElementsByClassName('kensaku')[0]
         const navMaskElement = document.getElementsByClassName('nav-mask')[0]
         const navSearchGridElement = document.getElementsByClassName('nav-serch-grid')[0]
+
+        const closeButtonElement_mobile = document.getElementsByClassName('close-button')[1]
+        const navMenuElement_mobile = document.getElementsByClassName('footer-nav')[1]
+        const serchElement_mobile = document.getElementsByClassName('header-item-serch')[0]
+        const navMaskElement_mobile = document.getElementsByClassName('nav-mask')[1]
+        const navSearchGridElement_mobile = document.getElementsByClassName('nav-serch-grid')[1]
 
         serchElement.addEventListener('click',()=>{
             navMenuElement.style['display'] = 'inline'
@@ -102,7 +158,79 @@
             return navSearchGridElement.placeholder = queryName
 
         }
+        
+
+        //mobile
+
+        serchElement_mobile.addEventListener('click',()=>{
+            navMenuElement_mobile.style['display'] = 'block'
+            console.log('click serch')
+            // navMaskElement_mobile.style['display'] = 'inline'
+            // console.log('kensaku click')
+        })
+
+        closeButtonElement_mobile.addEventListener('click',()=>{
+            navMenuElement_mobile.style['display'] = 'none'
+            // navMaskElement_mobile.style['display'] = 'none'
+        })
+
+        function placeholderChange_mobile(queryName) {
+            return navSearchGridElement_mobile.placeholder = queryName
+        }
+
+
+        const closeAside = document.getElementsByClassName('close-aside')[0].addEventListener('click',()=>{
+            closemenu(document.getElementsByClassName('footer-aside')[0])
+
+        })
+
+        const openAside = document.getElementsByClassName('header-item-menu')[0].addEventListener('click',()=>{
+            openmenu(document.getElementsByClassName('footer-aside')[0])
+
+        })
+
+
+        function openmenu(openwrap){
+            const trantisionValue = openwrap.clientWidth
+            openwrap.style['transform'] = `translateX(${0}px)`
+        }
+
+        function closemenu(closewrap){
+            const trantisionValue = closewrap.clientWidth
+            closewrap.style['transform'] = `translateX(-${trantisionValue}px)`
+            
+        }
+
+        //aside slide
+
+        const aside_nav = document.getElementsByClassName('nav-aside-mes')[0]
+        const slideinButton_men = document.getElementsByClassName('aside-men')[0].addEventListener('click',()=>{
+            slidein(aside_nav)
+        })
+
+        const slideinButton_women = document.getElementsByClassName('aside-women')[0].addEventListener('click',()=>{
+            slidein(aside_nav)
+        })
+
+        const slideinButton_mono = document.getElementsByClassName('aside-mono')[0].addEventListener('click',()=>{
+            slidein(aside_nav)
+        })
+
+        const slideoutButton = document.getElementsByClassName('aside-men-close-button')[0].addEventListener('click',()=>{
+            slideout(aside_nav)
+        })
+
+        function slideout(slidewrap){
+            slidewrap.style['transform'] = `translateX(${200}%)`
+        }
+
+        function slidein(slidewrap){
+            slidewrap.style['transform'] = `translateX(${0})`
+        }
+
+        
 
     </script>
+    <script type="text/javascript" src="./header.js"></script>
 </body>
 </html>

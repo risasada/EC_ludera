@@ -94,11 +94,15 @@
                 </div>
                 <div class="cart-mailadless">
                     <h4>メールアドレス</h4>
-                    <input class="cart-email" type="text" name="" id="">
-                    <input class="cart-submit" type="submit" name="" id="">
+                    <form action="" class="form" novalidate>
+                        <input class="cart-email" type="email" name="" id="" required>
+                        <span class="error"></span>
+                        <input class="cart-submit" type="submit" name="" id="">
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <script src="cartMenu.js"></script>
 </body>
 </html>

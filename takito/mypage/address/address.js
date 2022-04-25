@@ -18,6 +18,7 @@ const errormessage_coun = document.querySelector('#coun + span.error')
 
 const formss = document.getElementsByTagName('form')[0]
 
+
 //入力時バリデーション
 inputmei.addEventListener('change',function(e){
   console.log('paste')

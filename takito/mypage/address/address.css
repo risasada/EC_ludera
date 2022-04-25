@@ -170,14 +170,116 @@
             flex-flow: column wrap;
   }
   .account-info-wrap .account-info-left {
-    width: 100%;
+    display: none;
   }
   .account-info-wrap .account-info-center {
     width: 100%;
-    min-width: 600px;
+    height: 100vh;
   }
-  .account-info-wrap .account-info-right {
-    width: 100px;
+  .account-info-wrap .account-info-center form {
+    padding: 10px;
+  }
+  .account-info-wrap .account-info-center form input[type="checkbox"] {
+    display: inline;
+  }
+  .account-info-wrap .account-info-center form input:not(input[type="checkbox"]) {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #313131;
+    outline: none;
+    margin: 0;
+    font-size: 15pt;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .account-info-wrap .account-info-center form label {
+    display: block;
+    font-size: .5em;
+    margin: 5px;
+  }
+  .account-info-wrap .account-info-center form span:not(span[class="notblock"]) {
+    display: block;
+  }
+  .account-info-wrap .account-info-center form h4 {
+    font-weight: 500;
+  }
+  .account-info-wrap .account-info-center form h5 {
+    font-weight: 100;
+  }
+  .account-info-wrap .account-info-center form select {
+    width: 30%;
+  }
+  .account-info-wrap .account-info-center form .center-title {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .account-info-wrap .account-info-center form .mepage-submit-button {
+    outline: none;
+    border: 1px solid black;
+    border-style: none;
+    background: black;
+    color: antiquewhite;
+    width: 30%;
+    margin: 40px auto 0 auto;
+    font-size: .5em;
+  }
+  .error.reject {
+    color: #e44141;
+    font-weight: 900;
+    opacity: 0;
+    -webkit-animation: 'reject' .2s ease-in 0s 1 normal forwards;
+            animation: 'reject' .2s ease-in 0s 1 normal forwards;
+  }
+  @-webkit-keyframes reject {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes reject {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .error.approval {
+    color: green;
+    font-weight: 900;
+    opacity: 0;
+    -webkit-animation: 'approval' .3s ease-in 0s 1 normal forwards;
+            animation: 'approval' .3s ease-in 0s 1 normal forwards;
+  }
+  @-webkit-keyframes approval {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes approval {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: black;
   }
 }
 
