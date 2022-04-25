@@ -1,52 +1,265 @@
-
-
-.header{
-    width:100%;
-    background-color:white;
+body{
+    margin:0;
+    padding:0;
+}
+.header-wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    position: relative;
+    font-size: 0.5em;
+    padding: 3px 3px;
     position: fixed;
-    height: 55px;
-}
-.inner h1{
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 27px;
-    line-height: 55px;
+    background-color: white;
 }
 
-.inner{
-    width:90%;
-    height:100%;
+.header-wrap .header-left-wrap {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    margin:0 auto;
+    position: relative;
 }
 
-.header-menu1{
-    margin-right: auto;
+.header-wrap .header-left-wrap .menswear {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
 }
 
-.header-menu2{
-    margin-left: auto;
+.header-wrap .header-left-wrap .womanswear {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
 }
 
-.inner li{
-    line-height: 46px;
-    list-style: none;
-    display: inline-block;
-    font-size: 12px;
-    padding: 6px;
-    text-decoration:none;
-    height:50;
+.header-wrap .header-left-wrap .mono {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
 }
 
-.inner a{
-    text-decoration:none;
-    color:black;
+.header-wrap .header-left-wrap .kensaku {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
+    cursor: default;
 }
 
-.inner a:hover{
-    text-decoration: underline;
+.header-wrap .header-left-wrap .footer-nav {
+    display: none;
+    background: red;
+    padding: 10px;
+    position: absolute;
+    top: 46px;
+    left: 100px;
+    width: 300px;
+    z-index: 100;
 }
 
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    left: -10px;
+    cursor: default;
+}
+
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-menswear {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px 5px 2px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-womanswear {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px 5px 2px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .nav-footer-head .nav-mono {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px 5px 2px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .nav-form {
+    background: white;
+    border: 1px solid black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.header-wrap
+    .header-left-wrap
+    .footer-nav
+    .serch-grid
+    .nav-form
+    .nav-serch-grid {
+    width: 100%;
+    display: block;
+    outline: none;
+    border-style: none;
+    border: 0px;
+    font-size: 15pt;
+    padding: 5px 0px 5px 5px;
+    position: relative;
+}
+
+.header-wrap
+    .header-left-wrap
+    .footer-nav
+    .serch-grid
+    .nav-form
+    .nav-serch-grid::-webkit-input-placeholder {
+    font-size: 10px;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+}
+
+.header-wrap
+    .header-left-wrap
+    .footer-nav
+    .serch-grid
+    .nav-form
+    .nav-serch-grid:-ms-input-placeholder {
+    font-size: 10px;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+}
+
+.header-wrap
+    .header-left-wrap
+    .footer-nav
+    .serch-grid
+    .nav-form
+    .nav-serch-grid::-ms-input-placeholder {
+    font-size: 10px;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+}
+
+.header-wrap
+    .header-left-wrap
+    .footer-nav
+    .serch-grid
+    .nav-form
+    .nav-serch-grid::placeholder {
+    font-size: 10px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+}
+
+.header-wrap
+    .header-left-wrap
+    .footer-nav
+    .serch-grid
+    .nav-form
+    .nav-serch-submit {
+    display: block;
+    border-style: none;
+    border: 0px;
+}
+
+.header-wrap .header-left-wrap .footer-nav .serch-grid .close-button {
+    margin-left: 10px;
+    cursor: default;
+}
+
+.header-wrap .nav-mask {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 90;
+}
+
+.header-wrap .header-logo-wrap {
+    width: 40%;
+    text-align: center;
+}
+
+.header-wrap .header-right-wrap {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.header-wrap .header-right-wrap .hr-langage {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
+}
+
+.header-wrap .header-right-wrap .hr-login {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
+}
+
+.header-wrap .header-right-wrap .hr-hosiimono-list {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
+}
+
+.header-wrap .header-right-wrap .hr-shopingcart {
+    width: 100%;
+    text-align: center;
+    padding: 5px 8px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button.header-nav-menu:focus {
+    color: red;
+}
+
+button {
+    background: rgba(0, 0, 0, 0);
+    border-style: none;
+    border: 0px;
+    font-size: 0.5em;
+    padding: 0;
+    margin: 0;
+}
+/*# sourceMappingURL=header.css.map */
 
 
+.container ul{
+    display: flex;
+}

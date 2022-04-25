@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -18,36 +18,55 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @stack('css')
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
-    <script src="{{ asset('/js/manage.js') }}"></script>
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="header">
-        <div class="inner">
-            <div class="header-menu1">
-                <ul>
-                    <li> <a href="#about">MENSWEAR</a> </li>
-                    <li> <a href="#works">WOMANSWEAR</a> </li>
-                    <li> <a href="#news">EVERYTHING ELSE</a> </li>
-                    <li> <a href="#news">SEARCH</a> </li>
-
-                </ul>
+    <div class="header-wrap">
+        <div class="header-left-wrap">
+            <div class="menswear">
+                <a class="header-menu" href="/item/men's/none/none">Men's</a>
             </div>
-
-            <h1>SSADA</h1>
-
-            <div class="header-menu2">
-                <ul>
-                    <li> <a href="#about">WISHLIST</a> </li>
-                    <li> <a href="#works">SHOPINGBAG</a> </li>
-                </ul>
+            <div class="womanswear">
+                <a class="header-menu" href="/item/women's/none/none">Women's</a>
             </div>
-
-
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="mono">
+                <a href="">EverythingElse</a>
+            </div>
+            <div class="kensaku">
+                search
+            </div>
+            <nav class="footer-nav">
+                <div class="nav-footer-head">
+                    <div class="nav-menswear">
+                        <button onclick="placeholderChange('メンスウェア')">Men's</button>
+                    </div>
+                    <div class="nav-womanswear">
+                        <button onclick="placeholderChange('ウィメンズウェア')">Women's</button>
+                    </div>
+                    <div class="nav-mono">
+                        <button onclick="placeholderChange('物とモノ')">物とモノ</button>
+                    </div>
+                </div>
+                <div class="serch-grid">
+                    <form class='nav-form' action="">
+                        <input class="nav-serch-grid" type="text" placeholder="メンズウェアを検索">
+                        <input class="nav-serch-submit" type="image" src="./balloon-fill.svg">
+                    </form>
+                    <div class="close-button">閉じる</div>
+                </div>
+            </nav>
+            <div class="nav-mask"></div>
+        </div>
+        <div class="header-logo-wrap">
+            <a href="/">SSENCE</a>
+        </div>
+        <div class="header-right-wrap">
+            
+            <nav class="hr_language">
                 <div class="container">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
@@ -92,12 +111,46 @@
                     </div>
                 </div>
             </nav>
+            <div class="hr-hosiimono-list">
+                <a href = "">WishList</a>
+            </div>
+            <div class="hr-shopingcart">
+                <a href = "/cart">ShopingCart</a>
+            </div>
         </div>
+
+
     </div>
+    <script>
+        const closeButtonElement = document.getElementsByClassName('close-button')[0]
+        const navMenuElement = document.getElementsByClassName('footer-nav')[0]
+        const serchElement = document.getElementsByClassName('kensaku')[0]
+        const navMaskElement = document.getElementsByClassName('nav-mask')[0]
+        const navSearchGridElement = document.getElementsByClassName('nav-serch-grid')[0]
+
+        serchElement.addEventListener('click', () => {
+            navMenuElement.style['display'] = 'inline'
+            navMaskElement.style['display'] = 'inline'
+            console.log('kensaku click')
+        })
+
+        closeButtonElement.addEventListener('click', () => {
+            navMenuElement.style['display'] = 'none'
+            navMaskElement.style['display'] = 'none'
+        })
+
+        function placeholderChange(queryName) {
+            return navSearchGridElement.placeholder = queryName
+
+        }
+    </script>
     @yield('content')
+
+
+
     <footer>
-        <div class="menu">　
-            <ul>　　
+        <div class="menu">
+            <ul>
                 <li><a href="">© 2022 ssada.com</a></li>
                 <li><a href="">Terms & Conditions</a></li>
                 <li><a href="">Privacy Policy</a></li>
@@ -109,5 +162,9 @@
     </footer>
 
 </body>
+
+
+
+
 
 </html>
