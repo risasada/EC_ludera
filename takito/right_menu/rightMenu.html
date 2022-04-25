@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./rightMenuStyle.css">
+</head>
+<body>
+    
+        <div class="color-list">
+            <div class="color-button">
+                color
+            </div>
+            <div class="color-wrap">
+                <div class="color-item-list">
+                    <div class="color-item">
+                        aka
+                    </div>
+                    <div class="color-item">
+                        ao
+                    </div>
+                    <div class="color-item">
+                        kiiro
+                    </div>
+                    <div class="color-item">
+                        ggg
+                    </div>
+                    <div class="color-item">
+                        mmmm
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+    const elems = document.getElementsByClassName('color-button')[0]
+    const targetElems = document.getElementsByClassName('color-item-list')[0]
+
+    elems.addEventListener('click',function (e){
+
+        e.stopPropagation();
+
+        console.log(getComputedStyle(targetElems).transform)
+        if (getComputedStyle(targetElems).transform == 'matrix(1, 0, 0, 1, 0, 0)') {
+            targetElems.style['transform'] = 'translateY(-100%)'
+        }
+        else{
+            targetElems.style['transform'] = 'translateY(0)'
+        }
+        console.log(this)
+        
+    })
+</script>
+</body>
+</html>

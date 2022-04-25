@@ -1,0 +1,109 @@
+<!-- headに追加しているのはcssだけ -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="leftMenuStyle.css">
+</head>
+<body>
+    <div class="category-list">
+        <h3 id="reset_tag">
+            <a href="">全てのカテゴリ</a>
+        </h3>
+        <div class="category-item">
+            <div class="category-name">アクセサリー</div>
+            <div class="category-child-list" id="child-list">
+                <div class="category-child-name">アイウェア</div>
+                <div class="category-child-name">ウォレットチェーン</div>
+            </div>
+        </div>
+        <div class="category-item">
+            <div class="category-name">ウェア</div>
+            <div class="category-child-list" id="child-list">
+                <div class="category-child-name">アイウェア</div>
+            </div>
+        </div>
+        <div class="category-item">
+            <div class="category-name">シューズ</div>
+            <div class="category-child-list" id="child-list">
+                <div class="category-child-name"></div>
+            </div>
+        </div>
+    </div>
+<script>
+
+    const retes = document.getElementById('reset_tag')
+    const itemElement = document.getElementsByClassName('category-item')
+
+    retes.addEventListener('click',function(){
+        const categoryItem = document.querySelectorAll("div.category-item")
+        for (const elem of categoryItem){
+            elem.children[1].style['display'] = 'none'
+            // elem.nextElementSibling.style['display'] = 'none'
+        }
+    })
+
+    for (const elem of itemElement) {
+        elem.addEventListener('click',function(){
+
+            const nextElem = this.children[0].nextElementSibling
+            console.log(this.children[0].nextElementSibling.style['display'])
+            // console.log(getComputedStyle(nextElem).display)
+            if (getComputedStyle(nextElem).display==='none') {
+                nextElem.style['display'] = 'block'
+            } else if(getComputedStyle(nextElem).display==='block') {
+                nextElem.style['display'] = 'none'
+            }
+        })
+    }
+
+
+    ////////////一応まだ消したくない////////////////////
+/*
+    for (element in itemElement) {
+        element.addEventListener('click',function(){
+        
+        const nextElme = this.nextElementSibling
+        console.log(getComputedStyle(nextElme).display)
+        
+        if(getComputedStyle(nextElme).display==='none'){
+        
+            this.nextElementSibling.style['display'] = 'block'
+        }
+        else if(getComputedStyle(nextElme).display==='block'){
+    
+            this.nextElementSibling.style['display'] = 'none'
+        }
+    })  
+        
+    };
+
+*/
+    /*
+
+    document.getElementById("category-item").addEventListener('click',function(){
+        // console.log(this.nextElementSibling.style)
+        // console.log(this.nextElementSibling.style['display'])
+        const nextElme = this.nextElementSibling
+        console.log(getComputedStyle(nextElme).display)
+        // console.log('nowvalue',this.nextElementSibling.style.display)
+        if(getComputedStyle(nextElme).display==='none'){
+        //     console.log('display=none')
+            this.nextElementSibling.style['display'] = 'block'
+        }
+        else if(getComputedStyle(nextElme).display==='block'){
+        //     console.log('display=block')
+            this.nextElementSibling.style['display'] = 'none'
+        }
+    })  
+    document.getElementById("category-item2").addEventListener('click',function(e){
+        console.log(e)
+    })
+    */
+</script>
+</body>
+</html>

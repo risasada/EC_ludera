@@ -1,0 +1,42 @@
+.color-list {
+  width: 20%;
+  background: silver;
+}
+
+.color-list .color-button {
+  width: 50%;
+  background: forestgreen;
+  border: .1px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+
+.color-list .color-button::after {
+  content: "^";
+  color: antiquewhite;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.color-list .color-wrap {
+  overflow: hidden;
+  background: aquamarine;
+}
+
+.color-list .color-wrap .color-item-list {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+}
+
+.color-list .color-wrap .color-item-list .color-item {
+  background: #7676f7;
+  border: .1px solid black;
+}
+/*# sourceMappingURL=rightMenuStyle.css.map */
